@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catalogue & Live Stock | Aqua Mountaineer Panaji</title>
+  
+  <meta name="description" content="Browse our digital catalogue of premium aquarium fish, aquascaping stones, canister filters, and custom acrylic tanks. Build your quote and send directly via WhatsApp.">
+  <meta name="theme-color" content="#ffffff">
+  
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="shop">
+  <!-- Header & Navigation -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="index.html" aria-label="Aqua Mountaineer home"><img src="logo.svg" alt="Aqua Mountaineer logo"></a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a class="active" href="shop.html">Shop</a>
+        <a href="aquascaping.html">Aquascaping</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle light/dark theme">🌙</button>
+        <button class="icon-btn menu-toggle" id="menuToggle">☰</button>
+        <button class="icon-btn" data-open-cart aria-label="Open quote cart">🛒<span class="cart-count" data-cart-count style="display:none">0</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page Hero -->
+    <header class="page-hero">
+      <div class="container">
+        <div class="breadcrumb"><a href="index.html">Home</a> / Shop</div>
+        <h1>Digital Catalogue.</h1>
+        <p class="lead">Build your basket and send it to us on WhatsApp. We will confirm live stock, sizing, and finalize your pricing instantly.</p>
+      </div>
+    </header>
+
+    <section style="padding-top: 40px;">
+      <div class="container">
+        <!-- Filters -->
+        <div class="filters">
+          <select class="input" id="categoryFilter" aria-label="Filter by category">
+            <option value="all">All Categories</option>
+            <option value="Live Fish">Live Fish</option>
+            <option value="Aquascaping">Aquascaping & Hardscape</option>
+            <option value="Equipment">Filters & Lighting</option>
+            <option value="Tanks">Tanks & Custom Builds</option>
+            <option value="Starter Kits">Starter Kits</option>
+          </select>
+          <button class="btn-soft" onclick="quickMessage('stock')" style="width:100%">Ask about unlisted stock</button>
+        </div>
+
+        <!-- Dynamic Grid (Populated by main.js) -->
+        <div class="grid-4" id="shopGrid">
+          <!-- Products will inject here dynamically -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><img class="footer-logo" src="logo.svg" alt="Aqua Mountaineer"><p>Premium aquarium fish, aquascaping products, acrylic tanks and custom setups in Panaji, Goa.</p></div>
+      <div><h3>Shop</h3><div class="footer-links"><a href="shop.html">Catalogue</a><a href="aquascaping.html">Custom Setup</a><a onclick="quickMessage('stock')">Live Fish Stock</a></div></div>
+      <div><h3>Visit Us</h3><p>Shop No. 16, Madhu Vihar Building, Tambdi Mati, St. Inez, Panaji, Goa 403001</p></div>
+      <div><h3>Contact</h3><div class="footer-links"><a href="tel:+919823302608">+91 98233 02608</a><a onclick="quickMessage('location')">WhatsApp Directions</a><a href="contact.html">Contact Page</a></div></div>
+    </div>
+    <div class="container copyright"><span>© <span data-year></span> Aqua Mountaineer. All rights reserved.</span><span>Open daily • 9:00 AM – 10:00 PM</span></div>
+  </footer>
+
+  <a class="whatsapp-float" aria-label="WhatsApp Aqua Mountaineer" onclick="quickMessage('stock')">💬</a>
+
+  <!-- Cart Drawer -->
+  <aside class="cart-drawer" aria-hidden="true">
+    <div class="cart-backdrop" data-close-cart></div>
+    <div class="cart-panel" role="dialog" aria-label="WhatsApp quote basket">
+      <div class="cart-head"><h2>Quote Basket</h2><button class="icon-btn" data-close-cart>×</button></div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-foot">
+        <textarea id="cartNotes" class="input" placeholder="Add tank size, preferred fish, delivery/pickup note..."></textarea>
+        <div class="cart-total"><span>Visible total</span><span id="cartTotal">Quote-based</span></div>
+        <button class="btn" id="sendCart">Send on WhatsApp</button>
+        <button class="btn-ghost" id="clearCart">Clear Basket</button>
+      </div>
+    </div>
+  </aside>
+
+  <script src="products.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

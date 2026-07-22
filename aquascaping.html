@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Custom Aquariums & Aquascaping Goa | Aqua Mountaineer</title>
+  
+  <meta name="description" content="Elevate your interior with custom 3D aquariums, bespoke acrylic tanks, and professional aquascaping services by Aqua Mountaineer in Panaji, Goa. Consult with us today.">
+  <meta name="theme-color" content="#ffffff">
+  
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="aquascaping">
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="index.html" aria-label="Aqua Mountaineer home"><img src="logo.svg" alt="Aqua Mountaineer logo"></a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a class="active" href="aquascaping.html">Aquascaping</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle light/dark theme">🌙</button>
+        <button class="icon-btn menu-toggle" id="menuToggle">☰</button>
+        <button class="icon-btn" data-open-cart aria-label="Open quote cart">🛒<span class="cart-count" data-cart-count style="display:none">0</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page Hero -->
+    <header class="page-hero">
+      <div class="container">
+        <div class="breadcrumb"><a href="index.html">Home</a> / Aquascaping & Custom Builds</div>
+        <h1>Living Art for Your Space.</h1>
+        <p class="lead">From precision-crafted acrylic tanks to hyper-realistic 3D aquascapes. We design, build, and equip aquatic environments that demand attention.</p>
+        <div class="hero-actions">
+          <button class="btn" onclick="quickMessage('setup')">Start a Custom Consultation</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Visual Showcase -->
+    <section>
+      <div class="container">
+        <div class="grid-2">
+          <div class="visual-stack" data-animate>
+            <div class="image-frame" style="height: 400px;">
+              <img src="https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?auto=format&fit=crop&w=800&q=80" alt="Beautiful planted aquarium setup" style="height: 100%; object-fit: cover;">
+            </div>
+            <div class="stack-card"><strong>Planted Perfection.</strong><span>We supply the exact soil, lighting, and CO2 gear required for lush, green underwater landscapes.</span></div>
+          </div>
+          <div class="visual-stack" data-animate style="transition-delay: 0.2s;">
+            <div class="image-frame" style="height: 400px;">
+              <img src="https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?auto=format&fit=crop&w=800&q=80" alt="Custom koi pond and acrylic tank" style="height: 100%; object-fit: cover;">
+            </div>
+            <div class="stack-card"><strong>Custom Acrylics.</strong><span>Lighter, clearer, and stronger than glass. Custom dimensions built for your specific room.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="marquee-lite" style="padding: 80px 0;">
+      <div class="container">
+        <div class="section-head">
+          <h2>Our Custom Build Process.</h2>
+          <p>We take the guesswork out of building large or complex aquatic setups.</p>
+        </div>
+        <div class="steps" style="max-width: 800px;">
+          <div class="step" data-animate>
+            <div>
+              <h3>1. The Vision & Dimensions</h3>
+              <p>Send us a WhatsApp message with the physical dimensions of your space, your aesthetic preferences (e.g., heavily planted, minimalist rocks, specific fish), and your budget.</p>
+            </div>
+          </div>
+          <div class="step" data-animate>
+            <div>
+              <h3>2. Equipment Matching</h3>
+              <p>We calculate the exact water volume to recommend the appropriate filtration capacity (like canister filters), lighting spectrums, and substrate depth so your ecosystem won't crash.</p>
+            </div>
+          </div>
+          <div class="step" data-animate>
+            <div>
+              <h3>3. The Hardscape Setup</h3>
+              <p>Select from our imported Dragon Stone, Seiryu stone, and driftwood. We guide you on the 'rule of thirds' and structural stability for 3D backgrounds before you add water.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><img class="footer-logo" src="logo.svg" alt="Aqua Mountaineer"><p>Premium aquarium fish, aquascaping products, acrylic tanks and custom setups in Panaji, Goa.</p></div>
+      <div><h3>Shop</h3><div class="footer-links"><a href="shop.html">Catalogue</a><a href="aquascaping.html">Custom Setup</a><a onclick="quickMessage('stock')">Live Fish Stock</a></div></div>
+      <div><h3>Visit Us</h3><p>Shop No. 16, Madhu Vihar Building, Tambdi Mati, St. Inez, Panaji, Goa 403001</p></div>
+      <div><h3>Contact</h3><div class="footer-links"><a href="tel:+919823302608">+91 98233 02608</a><a onclick="quickMessage('location')">WhatsApp Directions</a><a href="contact.html">Contact Page</a></div></div>
+    </div>
+    <div class="container copyright"><span>© <span data-year></span> Aqua Mountaineer. All rights reserved.</span><span>Open daily • 9:00 AM – 10:00 PM</span></div>
+  </footer>
+
+  <a class="whatsapp-float" aria-label="WhatsApp Aqua Mountaineer" onclick="quickMessage('setup')">💬</a>
+
+  <!-- Cart Drawer (Kept for consistency if triggered from nav) -->
+  <aside class="cart-drawer" aria-hidden="true">
+    <div class="cart-backdrop" data-close-cart></div>
+    <div class="cart-panel" role="dialog">
+      <div class="cart-head"><h2>Quote Basket</h2><button class="icon-btn" data-close-cart>×</button></div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-foot">
+        <textarea id="cartNotes" class="input" placeholder="Notes..."></textarea>
+        <div class="cart-total"><span>Visible total</span><span id="cartTotal">Quote-based</span></div>
+        <button class="btn" id="sendCart">Send on WhatsApp</button>
+        <button class="btn-ghost" id="clearCart">Clear Basket</button>
+      </div>
+    </div>
+  </aside>
+
+  <script src="products.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
